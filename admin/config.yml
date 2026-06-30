@@ -1,0 +1,64 @@
+# ==========================================================================
+#  SFi Gestão Estratégica (Versão Moderna) — Painel de Conteúdo (Decap CMS)
+# --------------------------------------------------------------------------
+#  AUTENTICAÇÃO — DecapBridge (grátis, sem conta GitHub para o editor):
+#  1) Crie o site em https://decapbridge.com
+#  2) Cole abaixo: repo, identity_url e gateway_url gerados.
+#
+#  backend:
+#    name: git-gateway
+#    repo: SEU-USUARIO/SEU-REPOSITORIO
+#    branch: main
+#    identity_url: https://auth.decapbridge.com/sites/SEU-SITE-ID
+#    gateway_url: https://gateway.decapbridge.com
+# ==========================================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+locale: pt
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+collections:
+  # ----- ARTIGOS (Mídia) -----
+  - name: "artigos"
+    label: "Artigos (Mídia)"
+    description: "Artigos exibidos na página Mídia. O mais recente aparece primeiro."
+    files:
+      - name: "lista"
+        label: "Lista de Artigos"
+        file: "content/articles.json"
+        format: json
+        fields:
+          - label: "Artigos"
+            name: "items"
+            label_singular: "Artigo"
+            widget: "list"
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Categoria", name: "cat", widget: "string", hint: "Ex.: Segurança Pública, Governança, Direito Digital..."}
+              - {label: "Data", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false, format: "YYYY-MM-DD"}
+              - {label: "Link do artigo (URL do P7)", name: "url", widget: "string"}
+              - {label: "Miniatura", name: "thumb", widget: "image", required: false, hint: "Foto/infográfico do card. Se vazio, use uma imagem padrão."}
+              - {label: "É infográfico? (mostra a imagem inteira)", name: "info", widget: "boolean", default: false}
+              - {label: "Resumo (opcional)", name: "excerpt", widget: "text", required: false}
+              - {label: "Status", name: "status", widget: "select", options: ["Publicado","Rascunho"], default: "Publicado"}
+
+  # ----- VÍDEO EM DESTAQUE -----
+  - name: "video"
+    label: "Vídeo em destaque"
+    description: "Vídeo/entrevista exibido na página Mídia."
+    files:
+      - name: "destaque"
+        label: "Vídeo em destaque"
+        file: "content/video.json"
+        format: json
+        fields:
+          - {label: "ID do YouTube", name: "id", widget: "string", hint: "Só o código após v= (ex.: FlXqrp8NHsw)."}
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Canal / Veículo", name: "channel", widget: "string"}
+          - {label: "Data", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false, format: "YYYY-MM-DD"}
+          - {label: "Descrição", name: "desc", widget: "text"}

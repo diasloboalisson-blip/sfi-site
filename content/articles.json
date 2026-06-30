@@ -1,0 +1,374 @@
+{
+  "items": [
+    {
+      "title": "TERRITÓRIO SOB CONTROLE E SOB LEI",
+      "cat": "Segurança & IA",
+      "date": "2026-06-27",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/territorio-sob-controle-e-sob-lei",
+      "thumb": "assets/uploads/art_2706.jpg",
+      "info": true,
+      "status": "Publicado"
+    },
+    {
+      "title": "Garantismo Tecnológico e a Lei Embutida no Código na Era da Governança Algorítmica",
+      "cat": "Tecnologia & Direito",
+      "date": "2026-06-20",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/garantismo-tecnologico-e-a-lei-embutida-no-codigo-na-era-da-governanca-algoritmica",
+      "thumb": "assets/uploads/art_2006.jpg",
+      "info": true,
+      "status": "Publicado"
+    },
+    {
+      "title": "Inteligência Artificial na Segurança Pública: O Pacto Possível entre Eficiência Operacional e Segurança Jurídica",
+      "cat": "Segurança Pública",
+      "date": "2026-06-17",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/inteligencia-artificial-na-seguranca-publica-o-pacto-possivel-entre-eficiencia-operacional-e-seguranca-juridica",
+      "thumb": "assets/uploads/art_1706.jpg",
+      "info": true,
+      "status": "Publicado"
+    },
+    {
+      "title": "A Arquitetura da Legitimidade: A Governança Algorítmica e o Futuro da Segurança Pública no Brasil",
+      "cat": "Governança",
+      "date": "2026-06-08",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/a-arquitetura-da-legitimidade-a-governanca-algoritmica-e-o-futuro-da-seguranca-publica-no-brasil",
+      "thumb": "assets/uploads/art_0806.jpg",
+      "info": true,
+      "status": "Publicado"
+    },
+    {
+      "title": "A Arquitetura da Legitimidade: Governança, Inteligência Artificial e Consórcios na Segurança Pública Contemporânea",
+      "cat": "Governança",
+      "date": "2026-05-31",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/a-arquitetura-da-legitimidade-governanca-inteligencia-artificial-e-consorcios-na-seguranca-publica-contemporanea",
+      "thumb": "assets/uploads/b_seated_navy_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Smart City Regional: Alagoinhas (BA) na Vanguarda em Consórcio Intermunicipal de Segurança Pública",
+      "cat": "Inovação",
+      "date": "2026-05-28",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/smart-city-regional-alagoinhas-ba-visionariamente-na-vanguarda-em-consorcio-intermunicipal-de-seguranca-publica",
+      "thumb": "assets/uploads/art_2805.jpg",
+      "info": true,
+      "status": "Publicado"
+    },
+    {
+      "title": "Da “Cidade Invisível” ao Estado de Direito Digital: Uma Análise Crítica do BNMP 3.0 na Bahia",
+      "cat": "Direito Digital",
+      "date": "2026-05-12",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/da-cidade-invisivel-ao-estado-de-direito-digital-uma-analise-critica-do-bnmp-30-na-bahia",
+      "thumb": "assets/uploads/b_arms_grey_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "A Falácia da Algoritocracia: Tecnologia e Protocolos Éticos como Caminho para a Eficiência Nacional",
+      "cat": "Governança & IA",
+      "date": "2026-04-29",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/a-falacia-da-algoritocracia-a-integracao-entre-tecnologia-e-protocolos-eticos-como-caminho-para-a-eficiencia-nacional",
+      "thumb": "assets/uploads/b_intense_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Diálogos pela Justiça: A Ciência de Dados e o Olhar Antirracista na Segurança Pública",
+      "cat": "Dados & Justiça",
+      "date": "2026-04-25",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/dialogos-pela-justica-a-ciencia-de-dados-e-o-olhar-antirracista-na-seguranca-publica",
+      "thumb": "assets/uploads/b_headshot_smile_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Como a Bahia antecipou as regras do Ministério da Justiça para o uso de IA na Polícia",
+      "cat": "Política & Regulação",
+      "date": "2026-04-21",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/como-a-bahia-antecipou-as-regras-do-ministerio-da-justica-para-o-uso-de-ia-na-policia",
+      "thumb": "assets/uploads/b_arms_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "A Nova Era da Gestão Prisional: Tecnologia, Dignidade e a Retomada do Estado",
+      "cat": "Gestão Prisional",
+      "date": "2026-04-16",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/a-nova-era-da-gestao-prisional-tecnologia-dignidade-e-a-retomada-do-estado",
+      "thumb": "assets/uploads/b_profile_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "IA e Segurança Pública: O Caso da Bahia como Modelo de Socialização Ética da Tecnologia no Brasil",
+      "cat": "Segurança & IA",
+      "date": "2026-04-08",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/ia-e-seguranca-publica-o-caso-da-bahia-como-modelo-de-socializacao-etica-da-tecnologia-no-brasil",
+      "thumb": "assets/uploads/b_smile_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Inovação e Segurança Pública: Encontro debate o uso do reconhecimento facial na Bahia",
+      "cat": "Institucional",
+      "date": "2026-04-08",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/inovacao-e-seguranca-publica-encontro-debate-o-uso-do-reconhecimento-facial-na-bahia",
+      "thumb": "assets/uploads/b_stand_navy_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Uso de reconhecimento facial na segurança pública: na Bahia não é vigilância distópica; é filtro de justiça e valor social",
+      "cat": "Opinião",
+      "date": "2026-04-04",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/uso-de-reconhecimento-facial-na-seguranca-publica-na-bahia-nao-e-vigilancia-distopica-e-filtro-de-justica-e-valor-social",
+      "thumb": "assets/uploads/b_full_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Ciência e Tecnologia: Livro sobre Reconhecimento Facial é apresentado como “Escudo Estratégico” na SSP-BA",
+      "cat": "Ciência & Tecnologia",
+      "date": "2026-04-03",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/ciencia-e-tecnologia-livro-sobre-reconhecimento-facial-e-apresentado-como-escudo-estrategico-na-ssp-ba",
+      "thumb": "assets/uploads/b_book_facial_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Tragédia em Cassange: O “Tribunal do Crime” e a Resposta Tecnológica no Enfrentamento às Facções",
+      "cat": "Segurança Pública",
+      "date": "2026-03-25",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/tragedia-em-cassange-o-tribunal-do-crime-e-a-resposta-tecnologica-no-enfrentamento-as-faccoes",
+      "thumb": "assets/uploads/b_headshot_grey_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Comandante-Geral da PMBA recebe o Coronel Antonio Luis para diálogo sobre tecnologia e segurança baseada em evidências",
+      "cat": "Institucional",
+      "date": "2026-03-24",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/comandante-geral-da-pmba-recebe-o-coronel-antonio-luis-colunista-do-p7-noticias-para-dialogo-sobre-tecnologia-e-seguranca-baseada-em-evidencias",
+      "thumb": "assets/uploads/b_seated_navy_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "O Município como Protagonista da Era da Gestão Baseada em Evidências e Projetos Estratégicos",
+      "cat": "Gestão Pública",
+      "date": "2026-03-20",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/o-municipio-como-protagonista-da-era-da-gestao-baseada-em-evidencias-e-projetos-estrategicos",
+      "thumb": "assets/uploads/b_arms_grey_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Bahia Fortalece Segurança Integrada com 5ª Edição do Curso de Nivelamento para Guardas Municipais",
+      "cat": "Institucional",
+      "date": "2026-03-18",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/bahia-fortalece-seguranca-integrada-com-5a-edicao-do-curso-de-nivelamento-para-guardas-municipais",
+      "thumb": "assets/uploads/b_intense_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Ciência contra o Crime: O impacto do Reconhecimento Facial na Bahia em debate no Programa Primeira Mão",
+      "cat": "Mídia",
+      "date": "2026-03-16",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/ciencia-contra-o-crime-o-impacto-do-reconhecimento-facial-na-bahia-em-debate-no-programa-primeira-mao",
+      "thumb": "assets/uploads/b_headshot_smile_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Tecnologia a Serviço da Vida: Como o Reconhecimento Facial na Bahia está unindo famílias e localizando desaparecidos",
+      "cat": "Tecnologia & Sociedade",
+      "date": "2026-03-04",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/tecnologia-a-servico-da-vida-como-o-reconhecimento-facial-na-bahia-esta-unindo-familias-e-localizando-desaparecidos",
+      "thumb": "assets/uploads/b_arms_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "O Divisor de Águas de 2026: Do Operacional ao Legado de Estado",
+      "cat": "Estratégia",
+      "date": "2026-02-28",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/o-divisor-de-aguas-de-2026-do-operacional-ao-legado-de-estado-2",
+      "thumb": "assets/uploads/b_profile_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Colunista do P7 apresenta obra sobre reconhecimento facial ao Secretário de Segurança da Bahia no COI",
+      "cat": "Institucional",
+      "date": "2026-02-27",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/colunista-do-p7-noticias-apresenta-obra-sobre-reconhecimento-facial-ao-secretario-de-seguranca-da-bahia-no-coi",
+      "thumb": "assets/uploads/b_book_facial_alt_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Redoma de Proteção: Como a tecnologia pretende resgatar a segurança pública na Bahia em 2026",
+      "cat": "Segurança & Tecnologia",
+      "date": "2026-02-24",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/redoma-de-protecao-como-a-tecnologia-pretende-resgatar-a-seguranca-publica-na-bahia-em-2026",
+      "thumb": "assets/uploads/b_smile_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "A Redoma de Proteção: Tecnologia e Integração Federativa como Pilares da Paz Social",
+      "cat": "Segurança & Tecnologia",
+      "date": "2026-02-18",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/a-redoma-de-protecao-tecnologia-e-integracao-federativa-como-pilares-da-paz-social",
+      "thumb": "assets/uploads/b_stand_navy_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "A Batalha Invisível: O Duelo entre a Inteligência Estatal e o Poder de Fogo das Facções",
+      "cat": "Segurança Pública",
+      "date": "2026-02-10",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/a-batalha-invisivel-o-duelo-entre-a-inteligencia-estatal-e-o-poder-de-fogo-das-faccoes",
+      "thumb": "assets/uploads/b_full_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "O Reconhecimento Facial Só Prende Pobre? O Caso Sérgio Nahas na Praia do Forte-BA Prova o Contrário",
+      "cat": "Direito & Tecnologia",
+      "date": "2026-01-27",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/o-reconhecimento-facial-so-prende-pobre-o-caso-sergio-nahas-na-praia-do-forte-ba-prova-o-contrario",
+      "thumb": "assets/uploads/b_headshot_grey_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Regulação Algorítmica Local: Como a nova legislação de Salvador dialoga com a crítica acadêmica",
+      "cat": "Direito Digital",
+      "date": "2026-01-13",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/regulacao-algoritmica-local-como-a-nova-legislacao-de-salvador-dialoga-com-a-critica-academica",
+      "thumb": "assets/uploads/b_seated_navy_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "O Fim do Anonimato e a Persistência da Crise: Uma Análise Sistêmica sobre a Tecnologia na Segurança Pública da Bahia",
+      "cat": "Segurança Pública",
+      "date": "2025-12-29",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/o-fim-do-anonimato-e-a-persistencia-da-crise-uma-analise-sistemica-sobre-a-tecnologia-na-seguranca-publica-da-bahia",
+      "thumb": "assets/uploads/b_arms_grey_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "O Futuro é Data-Driven: Como o livro “Avaliação do Vídeo-Polícia Expansão” ensina o Estado a inovar e antecipar riscos",
+      "cat": "Gestão & Dados",
+      "date": "2025-12-19",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/o-futuro-e-data-driven-como-o-livro-avaliacao-do-video-policia-expansao-ensina-o-estado-a-inovar-antecipar-riscos-e-entregar-uma-experiencia-de-seguranca-superior-ao-cidadao-1",
+      "thumb": "assets/uploads/b_book_pipa_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Diagnóstico Profundo: Livro mapeia as falhas estruturais que exigiram a modernização da segurança pública na Bahia",
+      "cat": "Ciência & Tecnologia",
+      "date": "2025-12-11",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/diagnostico-profundo-livro-mapeia-as-falhas-estruturais-que-exigiram-a-modernizacao-da-seguranca-publica-na-bahia",
+      "thumb": "assets/uploads/b_book_facial_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "A Bahia na Era do Conhecimento do Século XXI?",
+      "cat": "Opinião",
+      "date": "2025-12-02",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/artigo-a-bahia-na-era-do-conhecimento-do-seculo-xxi",
+      "thumb": "assets/uploads/b_intense_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "PL Antifacção amplia o debate sobre tecnologias de vigilância",
+      "cat": "Direito & Segurança",
+      "date": "2025-11-26",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/artigo-pl-antifaccao-amplia-debate-sobre-tecnologias-de-vigilancia",
+      "thumb": "assets/uploads/b_headshot_smile_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Estudo aponta Reconhecimento Facial como arma estratégica para frear a expansão de facções na Bahia",
+      "cat": "Segurança Pública",
+      "date": "2025-11-18",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/artigo-estudo-aponta-reconhecimento-facial-como-arma-estrategica-para-frear-expansao-de-faccoes-criminosas-na-bahia",
+      "thumb": "assets/uploads/b_arms_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Livro sobre reconhecimento facial na Bahia impulsiona o debate de “Cidade Inteligente” e “Cidade Resiliente”",
+      "cat": "Ciência & Tecnologia",
+      "date": "2025-11-11",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/livro-sobre-reconhecimento-facial-na-bahia-impulsiona-o-debate-dos-conceitos-de-cidade-inteligente-e-cidade-resiliente",
+      "thumb": "assets/uploads/b_book_facial_alt_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "A Megaoperação Policial no Rio de Janeiro",
+      "cat": "Segurança Pública",
+      "date": "2025-11-04",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/artigo-a-megaoperacao-policial-no-rio-de-janeiro",
+      "thumb": "assets/uploads/b_profile_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    },
+    {
+      "title": "Reconhecimento facial na Bahia recebe selo acadêmico e é classificado como “case de sucesso” em segurança pública",
+      "cat": "Ciência & Tecnologia",
+      "date": "2025-10-31",
+      "excerpt": "",
+      "url": "https://p7noticias.com.br/noticia/reconhecimento-facial-na-bahia-recebe-selo-academico-e-e-classificado-como-case-de-sucesso-em-seguranca-publica",
+      "thumb": "assets/uploads/b_smile_black_c.jpg",
+      "info": false,
+      "status": "Publicado"
+    }
+  ]
+}

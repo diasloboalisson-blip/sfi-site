@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mídia & Artigos — SFi Gestão Estratégica</title>
+<meta name="description" content="Análises semanais sobre segurança pública, inovação, política e gestão."><meta name="theme-color" content="#0A0C10">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#0A0C10;--bg2:#10131A;--bg3:#161B24;--elev:#1A2030;
+--ink:#EDEFF3;--mut:#9AA4B2;--mut2:#6A7382;
+--acc:#4F8FFF;--acc2:#83AEFF;--acc-deep:#2C5FD6;
+--line:rgba(255,255,255,.08);--line2:rgba(79,143,255,.30);
+--r:16px;--r-sm:10px;--maxw:1240px;
+--ease:cubic-bezier(.22,1,.36,1);--ease2:cubic-bezier(.16,1,.3,1);
+--disp:'Space Grotesk',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:#04070D}
+.protect{position:relative;-webkit-user-select:none;user-select:none}
+.protect::after{content:"";position:absolute;inset:0;z-index:3}.protect img{pointer-events:none;-webkit-user-drag:none}
+h1,h2,h3,h4{font-family:var(--disp);font-weight:600;line-height:1.04;letter-spacing:-.02em}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--acc2)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--acc)}
+/* scroll progress */
+#prog{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2));z-index:200;transition:width .1s linear}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.5s var(--ease)}
+header.scr{background:rgba(10,12,16,.72);backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--disp);font-weight:600;font-size:1.06rem;letter-spacing:-.01em}
+.brand .mk{width:34px;height:34px;border:1px solid var(--line2);border-radius:9px;display:grid;place-items:center;color:var(--acc2);font-family:var(--mono);font-size:.82rem;background:linear-gradient(160deg,rgba(79,143,255,.14),transparent)}
+.menu{display:flex;gap:30px;align-items:center}
+.menu a{font-size:.9rem;color:var(--mut);font-weight:500;transition:color .3s;position:relative}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--acc);transition:width .35s var(--ease)}
+.menu a:hover{color:var(--ink)}.menu a:hover::after{width:100%}
+.nav-r{display:flex;align-items:center;gap:16px}
+.soc{display:flex;gap:12px}.soc a{color:var(--mut);transition:.3s}.soc a:hover{color:var(--acc2);transform:translateY(-2px)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;font-family:var(--disp);font-size:.88rem;font-weight:600;cursor:pointer;transition:.35s var(--ease);border:1px solid transparent;white-space:nowrap}
+.btn-acc{background:var(--acc);color:#04070D;box-shadow:0 6px 24px -6px rgba(79,143,255,.6)}
+.btn-acc:hover{background:var(--acc2);transform:translateY(-2px);box-shadow:0 12px 34px -6px rgba(79,143,255,.7)}
+.btn-gh{border-color:var(--line);color:var(--ink)}.btn-gh:hover{border-color:var(--acc);color:var(--acc2)}
+.btn svg{transition:transform .35s var(--ease)}.btn:hover svg{transform:translateX(4px)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.burger span{width:22px;height:2px;background:var(--ink);transition:.3s}
+.mm{position:fixed;inset:0;z-index:99;background:rgba(8,10,14,.97);backdrop-filter:blur(14px);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:24px;transform:translateY(-100%);transition:transform .55s var(--ease)}
+.mm.open{transform:none}.mm a{font-family:var(--disp);font-size:1.7rem;font-weight:600;color:var(--ink)}.mm a:hover{color:var(--acc2)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:120px 0 60px}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 70% 20%,#000 30%,transparent 75%);opacity:.5;z-index:0}
+.glow{position:absolute;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(79,143,255,.20),transparent 62%);top:-220px;right:-160px;z-index:0;filter:blur(8px);animation:float 14s var(--ease) infinite alternate}
+@keyframes float{to{transform:translate(-40px,40px) scale(1.06)}}
+.hero .container{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center;width:100%}
+.h-copy{max-width:620px}
+.h-copy .mono{opacity:0;transform:translateY(14px);animation:rise .8s var(--ease) .1s forwards}
+.h1{font-size:clamp(2.7rem,6.2vw,5.1rem);font-weight:700;letter-spacing:-.035em;margin:22px 0 0;line-height:.98}
+.h1 em{font-style:normal;color:var(--acc);position:relative}
+.h1 .w{display:inline-block;opacity:0;transform:translateY(26px);animation:rise .9s var(--ease) forwards}
+.h-sub{color:var(--mut);font-size:1.12rem;max-width:50ch;margin-top:26px;opacity:0;transform:translateY(16px);animation:rise .8s var(--ease) .55s forwards}
+.h-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;opacity:0;transform:translateY(16px);animation:rise .8s var(--ease) .7s forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.h-fig{position:relative;justify-self:end;width:100%;max-width:460px;aspect-ratio:3/3.9;border-radius:20px;overflow:hidden;border:1px solid var(--line);opacity:0;animation:fade 1.2s var(--ease) .35s forwards}
+@keyframes fade{to{opacity:1}}
+.h-fig img{width:100%;height:100%;object-fit:cover;object-position:center 18%;filter:contrast(1.04)}
+.h-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,12,16,.55)),linear-gradient(90deg,rgba(10,12,16,.5),transparent 30%)}
+.h-chip{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(12,16,24,.74);backdrop-filter:blur(10px);border:1px solid var(--line2);border-radius:12px;padding:12px 15px}
+.h-chip .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--acc2);text-transform:uppercase}
+.h-chip .v{font-family:var(--disp);font-weight:600;font-size:.95rem;margin-top:3px}
+.scrollcue{position:absolute;left:28px;bottom:26px;z-index:2;display:flex;align-items:center;gap:10px;color:var(--mut2);font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase}
+.scrollcue .ln{width:30px;height:1px;background:var(--mut2);position:relative;overflow:hidden}
+.scrollcue .ln::after{content:"";position:absolute;inset:0;background:var(--acc);animation:sweep 2.4s var(--ease) infinite}
+@keyframes sweep{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
+/* marquee */
+.marq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;overflow:hidden;white-space:nowrap;background:var(--bg2)}
+.marq-tr{display:inline-block;animation:marq 32s linear infinite}
+.marq-tr span{font-family:var(--mono);font-size:.82rem;letter-spacing:.1em;color:var(--mut);margin:0 26px;text-transform:uppercase}
+.marq-tr span b{color:var(--acc2);font-weight:500}
+@keyframes marq{to{transform:translateX(-50%)}}
+/* sections */
+section{position:relative}
+.sec{padding:120px 0}
+.sec-head{max-width:720px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(2rem,4vw,3.1rem);margin-top:18px;letter-spacing:-.03em}
+.sec-head h2 em{font-style:normal;color:var(--acc)}
+.sec-head p{color:var(--mut);font-size:1.08rem;margin-top:18px;max-width:60ch}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{background:var(--bg);padding:42px 26px;text-align:center}
+.stat .n{font-family:var(--disp);font-weight:700;font-size:clamp(2.4rem,5vw,3.4rem);letter-spacing:-.04em;color:var(--ink);line-height:1}
+.stat .n i{font-style:normal;color:var(--acc)}
+.stat .l{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-top:12px}
+/* manifesto */
+.mani{display:grid;grid-template-columns:.86fr 1.14fr;gap:60px;align-items:center}
+.mani-fig{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:3/3.6}
+.mani-fig img{width:100%;height:100%;object-fit:cover;object-position:center 14%}
+.mani-fig::before{content:"";position:absolute;inset:0;border:1px solid var(--line2);border-radius:18px;z-index:2;pointer-events:none}
+.mani-fig .tag{position:absolute;top:16px;left:16px;z-index:2}
+.mani-q{font-family:var(--disp);font-weight:500;font-size:clamp(1.5rem,2.6vw,2.15rem);letter-spacing:-.02em;line-height:1.18}
+.mani-q em{font-style:normal;color:var(--acc)}
+.mani p{color:var(--mut);font-size:1.05rem;margin-top:22px;max-width:54ch}
+.mani .lk{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-family:var(--disp);font-weight:600;color:var(--acc2);font-size:.95rem}
+.mani .lk svg{transition:transform .35s var(--ease)}.mani .lk:hover svg{transform:translateX(5px)}
+/* bento areas */
+.bento{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:34px;overflow:hidden;transition:.45s var(--ease)}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 120% at 100% 0%,rgba(79,143,255,.10),transparent 55%);opacity:0;transition:opacity .45s}
+.card:hover{transform:translateY(-5px);border-color:var(--line2)}
+.card:hover::before{opacity:1}
+.card .num{font-family:var(--mono);font-size:.78rem;color:var(--acc2);letter-spacing:.1em}
+.card h3{font-size:1.35rem;margin:16px 0 12px;letter-spacing:-.02em}
+.card p{color:var(--mut);font-size:.98rem}
+.card .ar{position:absolute;top:30px;right:30px;color:var(--mut2);transition:.4s var(--ease)}
+.card:hover .ar{color:var(--acc2);transform:translate(3px,-3px)}
+/* books */
+.books{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.book{position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--bg2);transition:.45s var(--ease)}
+.book:hover{transform:translateY(-5px);border-color:var(--line2)}
+.book .ph{position:relative;aspect-ratio:4/3.4;overflow:hidden}
+.book .ph img{width:100%;height:100%;object-fit:cover;object-position:center 28%;transition:transform .9s var(--ease)}
+.book:hover .ph img{transform:scale(1.05)}
+.book .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,12,16,.85))}
+.book .bd{padding:26px}
+.book .ed{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc2)}
+.book h3{font-size:1.4rem;margin:12px 0 10px;letter-spacing:-.02em}
+.book p{color:var(--mut);font-size:.96rem}
+/* news */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ncard{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--bg2);transition:.45s var(--ease);display:flex;flex-direction:column}
+.ncard:hover{transform:translateY(-5px);border-color:var(--line2)}
+.ncard .th{aspect-ratio:16/10;overflow:hidden;background:var(--bg3);border-bottom:1px solid var(--line)}
+.ncard .th img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.ncard:hover .th img{transform:scale(1.06)}
+.ncard .bd{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.ncard .cat{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc2)}
+.ncard h4{font-size:1.08rem;line-height:1.25;letter-spacing:-.01em}
+.ncard .rd{margin-top:auto;font-family:var(--disp);font-weight:600;font-size:.86rem;color:var(--mut);display:inline-flex;gap:8px;align-items:center;transition:color .3s}
+.ncard:hover .rd{color:var(--acc2)}
+.center{text-align:center;margin-top:48px}
+/* cta band */
+.cta{position:relative;padding:130px 0;text-align:center;overflow:hidden;border-top:1px solid var(--line)}
+.cta .glow{top:auto;bottom:-380px;left:50%;transform:translateX(-50%);right:auto;width:900px;height:700px;animation:none}
+.cta h2{position:relative;z-index:2;font-size:clamp(2.2rem,4.6vw,3.6rem);letter-spacing:-.035em;max-width:18ch;margin:0 auto}
+.cta h2 em{font-style:normal;color:var(--acc)}
+.cta .row{position:relative;z-index:2;display:flex;gap:16px;justify-content:center;margin-top:38px;flex-wrap:wrap}
+/* footer */
+footer{border-top:1px solid var(--line);padding:70px 0 40px;background:var(--bg2)}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px}
+.fbrand p{color:var(--mut);font-size:.95rem;margin-top:18px;max-width:38ch}
+.fcol h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut2);font-weight:500;margin-bottom:18px}
+.fcol a{display:block;color:var(--mut);font-size:.95rem;margin-bottom:12px;transition:color .3s}.fcol a:hover{color:var(--acc2)}
+.fbot{display:flex;justify-content:space-between;align-items:center;margin-top:54px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap;gap:16px}
+.fbot p{color:var(--mut2);font-size:.85rem;font-family:var(--mono);letter-spacing:.04em}
+@media(max-width:980px){
+.hero .container{grid-template-columns:1fr;gap:30px}.h-fig{display:none}
+.mani{grid-template-columns:1fr;gap:34px}.mani-fig{max-width:420px}
+.bento,.books{grid-template-columns:1fr}.news{grid-template-columns:1fr}
+.stats{grid-template-columns:repeat(2,1fr)}.fgrid{grid-template-columns:1fr 1fr}
+.menu,.nav-r .btn,.nav-r .soc{display:none}.burger{display:flex}
+.sec{padding:84px 0}
+}
+@media(max-width:560px){.stats{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr}.fbot{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* ===== paginas internas ===== */
+.phero{position:relative;padding:150px 0 72px;overflow:hidden}
+.phero .container{position:relative;z-index:2}
+.phero.split .container{display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:center}
+.phero h1{font-size:clamp(2.3rem,5vw,3.9rem);font-weight:700;letter-spacing:-.03em;margin-top:20px;line-height:1.0}
+.phero h1 em{font-style:normal;color:var(--acc)}
+.phero .sub{color:var(--mut);font-size:1.12rem;max-width:56ch;margin-top:22px}
+.phero .role{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;color:var(--acc2);margin-top:14px;text-transform:uppercase}
+.phero-fig{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:3/3.7;justify-self:end;width:100%;max-width:430px}
+.phero-fig img{width:100%;height:100%;object-fit:cover;object-position:center 14%}
+.phero-fig::before{content:"";position:absolute;inset:0;border:1px solid var(--line2);border-radius:18px;z-index:2;pointer-events:none}
+.phero-fig .tag{position:absolute;top:16px;left:16px;z-index:3}
+.prose{max-width:760px}
+.prose p{color:var(--mut);font-size:1.08rem;margin-bottom:20px}
+.prose p strong{color:var(--ink);font-weight:600}
+.prose.lead p:first-child::first-letter{font-family:var(--disp);font-weight:700;font-size:3.4em;float:left;line-height:.78;margin:8px 14px 0 0;color:var(--acc)}
+.creds{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
+.cred{border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-size:.9rem;color:var(--mut);background:var(--bg2)}
+.cred b{color:var(--ink);font-weight:600;font-family:var(--disp)}
+.vals{display:grid;gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.val{background:var(--bg);display:grid;grid-template-columns:84px 1fr;gap:24px;padding:30px 6px;align-items:start}
+.val .vn{font-family:var(--mono);color:var(--acc2);font-size:.92rem;padding-top:4px}
+.val h4{font-size:1.25rem;letter-spacing:-.02em}
+.val p{color:var(--mut);margin-top:8px;max-width:64ch}
+.svc{display:grid;grid-template-columns:118px 1fr;gap:30px;padding:42px 0;border-top:1px solid var(--line);align-items:start}
+.svc:last-child{border-bottom:1px solid var(--line)}
+.svc .sn{font-family:var(--disp);font-weight:700;font-size:2.6rem;color:var(--acc);letter-spacing:-.04em;line-height:.9}
+.svc h3{font-size:1.65rem;letter-spacing:-.02em}
+.svc p{color:var(--mut);margin-top:14px;max-width:64ch;font-size:1.04rem}
+.contract{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.citem{border:1px solid var(--line);border-radius:var(--r);padding:28px;background:var(--bg2);transition:.4s var(--ease)}
+.citem:hover{border-color:var(--line2);transform:translateY(-4px)}
+.citem h4{font-size:1.16rem;letter-spacing:-.01em}
+.citem p{color:var(--mut);margin-top:10px;font-size:.96rem}
+.bookfull{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:center;padding:64px 0;border-top:1px solid var(--line)}
+.bookfull:first-of-type{border-top:0;padding-top:8px}
+.bookfull.rev .bk-fig{order:2}
+.bk-fig{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/4.7}
+.bk-fig img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.bk-fig::before{content:"";position:absolute;inset:0;border:1px solid var(--line2);border-radius:18px;z-index:2;pointer-events:none}
+.bookfull .ed{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc2)}
+.bookfull h2{font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-.03em;margin:14px 0 8px}
+.bookfull .tag{color:var(--acc2);font-family:var(--disp);font-weight:500;font-size:1.08rem;margin-bottom:18px}
+.bookfull .prose{max-width:none}.bookfull .prose p{font-size:1.02rem}
+.buy{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ncard .th{background:var(--bg3)}
+.ncard .th img{object-fit:cover;object-position:center}
+.ncard .th.portrait img{object-position:center 16%}
+.ncard h4{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.feat-video{display:grid;grid-template-columns:1.45fr 1fr;gap:0;align-items:stretch;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.video-wrap{position:relative;aspect-ratio:16/9;background:#000}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.feat-meta{padding:34px;display:flex;flex-direction:column;justify-content:center}
+.feat-meta .cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc2)}
+.feat-meta h3{font-size:1.45rem;margin:12px 0;letter-spacing:-.02em}
+.feat-meta p{color:var(--mut);margin-bottom:20px;font-size:.98rem}
+.events{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.event{border:1px solid var(--line);border-radius:var(--r);padding:28px;background:var(--bg2)}
+.event .ic{color:var(--acc2);margin-bottom:14px}
+.event h4{font-size:1.12rem}
+.event p{color:var(--mut);margin-top:8px;font-size:.95rem}
+.contact{display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:start}
+.form{display:grid;gap:18px}
+.field label{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+.field input,.field textarea{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r-sm);padding:14px 16px;color:var(--ink);font-family:var(--body);font-size:1rem;transition:.3s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(79,143,255,.16)}
+.field textarea{min-height:130px;resize:vertical}
+.fmsg{font-size:.92rem;margin-top:4px;color:var(--acc2);min-height:20px}
+.cinfo{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.crow{background:var(--bg2);padding:22px 24px;display:flex;gap:16px;align-items:flex-start}
+.crow .ic{color:var(--acc2);margin-top:2px;flex-shrink:0}
+.crow .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut2)}
+.crow .v{font-family:var(--disp);font-weight:500;margin-top:4px}
+.crow .v a{color:var(--mut)}.crow .v a:hover{color:var(--acc2)}
+.cfig{margin-top:18px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3.2}
+.cfig img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.soc-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
+@media(max-width:980px){
+.phero.split .container{grid-template-columns:1fr;gap:30px}.phero-fig{display:none}
+.svc{grid-template-columns:1fr;gap:8px}.svc .sn{font-size:2.1rem}
+.contract{grid-template-columns:1fr}
+.bookfull{grid-template-columns:1fr;gap:28px;padding:44px 0}.bookfull.rev .bk-fig{order:0}.bk-fig{max-width:420px}
+.mgrid{grid-template-columns:1fr}.feat-video{grid-template-columns:1fr}.events{grid-template-columns:1fr}
+.contact{grid-template-columns:1fr}.val{grid-template-columns:54px 1fr;gap:14px}
+}
+</style></head><body>
+<div id="prog"></div>
+<header id="hdr"><div class="container nav">
+<a href="index.html" class="brand"><span class="mk">SFi</span> Gestão Estratégica</a>
+<nav class="menu">
+<a href="sobre.html">A SFi</a><a href="areas.html">Áreas</a><a href="publicacoes.html">Publicações</a><a href="midia.html" style="color:var(--ink)">Mídia</a><a href="contato.html">Contato</a>
+</nav>
+<div class="nav-r"><div class="soc">
+<a href="https://www.linkedin.com/in/antonio-luis-santos-filho-316323397/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+<a href="https://www.instagram.com/antonioluissfi" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></a>
+</div>
+<a href="contato.html" class="btn btn-acc">Falar com a SFi</a></div>
+<div class="burger" id="burger"><span></span><span></span><span></span></div>
+</div></header>
+<div class="mm" id="mm">
+<a href="sobre.html">A SFi</a><a href="areas.html">Áreas</a><a href="publicacoes.html">Publicações</a><a href="midia.html">Mídia</a><a href="contato.html">Contato</a>
+<a href="contato.html" class="btn btn-acc" style="margin-top:8px">Falar com a SFi</a></div>
+<section class="phero"><div class="grid-bg"></div><div class="glow"></div><div class="container reveal">
+<span class="mono eyebrow">Mídia &amp; Artigos</span>
+<h1>Ideias e debates em <em>foco</em>.</h1>
+<p class="sub">Análises semanais sobre os cenários contemporâneos da segurança pública, inovação tecnológica, política e gestão governamental.</p>
+</div></section>
+
+<section class="sec" style="padding-top:60px"><div class="container">
+<div class="sec-head reveal"><span class="mono eyebrow">Acervo de Artigos</span><h2>Da linha de frente à <em>evidência</em>.</h2>
+<p>Coluna no P7 Notícias sobre segurança pública, governança algorítmica e o uso de IA com legitimidade institucional.</p></div>
+<div class="mgrid" id="mgrid"></div>
+<div class="center reveal"><a href="https://p7noticias.com.br/categoria/colunistas" target="_blank" rel="noopener" class="btn btn-gh">Ver todos no P7 Notícias <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div></section>
+
+<section class="sec" style="padding-top:0" id="entrevistas"><div class="container">
+<div class="sec-head reveal"><span class="mono eyebrow">Entrevistas &amp; Vídeos</span><h2>Na imprensa e no <em>rádio</em>.</h2></div>
+<div id="featwrap" class="reveal"></div></div></section>
+
+<section class="sec" style="padding-top:0"><div class="container">
+<div class="sec-head reveal"><span class="mono eyebrow">Na Mídia e Eventos</span><h2>Onde a voz se mantém <em>ativa</em>.</h2></div>
+<div class="events">
+<div class="event reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4"/></svg></div><h4>Rádios e Podcasts</h4><p>Entrevistas em programas sobre segurança, gestão e inovação tecnológica.</p></div>
+<div class="event reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div><h4>Centro de Operações e Inteligência</h4><p>Apresentações estratégicas no COI sobre tecnologia aplicada à segurança.</p></div>
+<div class="event reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><h4>Palestras e Lançamentos</h4><p>Debates sobre as obras e os conceitos de cidade inteligente e resiliente.</p></div>
+</div></div></section>
+<section class="cta"><div class="glow"></div><div class="container">
+<h2 class="reveal">Vamos desenhar a <em>decisão segura</em>.</h2>
+<div class="row reveal">
+<a href="contato.html" class="btn btn-acc">Falar com a SFi <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a href="https://www.linkedin.com/in/antonio-luis-santos-filho-316323397/" target="_blank" rel="noopener" class="btn btn-gh">Conectar no LinkedIn</a>
+</div></div></section>
+<footer><div class="container">
+<div class="fgrid">
+<div class="fbrand"><a href="index.html" class="brand"><span class="mk">SFi</span> Gestão Estratégica</a>
+<p>Inteligência estratégica fundamentada em evidências para a gestão pública e o empresariado de tecnologia.</p></div>
+<div class="fcol"><h4>Navegação</h4><a href="sobre.html">A SFi</a><a href="areas.html">Áreas de Atuação</a><a href="publicacoes.html">Publicações</a><a href="midia.html">Mídia &amp; Artigos</a></div>
+<div class="fcol"><h4>Contato</h4><a href="contato.html">Consultoria &amp; Propostas</a><a href="contato.html">Palestras e Cursos</a><a href="contato.html">Imprensa</a><a href="#">Salvador · Bahia · Brasil</a></div>
+</div>
+<div class="fbot"><p>© 2026 SFi Gestão Estratégica</p>
+<div class="soc"><a href="https://www.linkedin.com/in/antonio-luis-santos-filho-316323397/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+<a href="https://www.instagram.com/antonioluissfi" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></a></div></div>
+</div></footer>
+<script>
+const FALLBACK_ARTICLES = {"items": [{"title": "TERRITÓRIO SOB CONTROLE E SOB LEI", "cat": "Segurança & IA", "date": "2026-06-27", "excerpt": "", "url": "https://p7noticias.com.br/noticia/territorio-sob-controle-e-sob-lei", "thumb": "assets/uploads/art_2706.jpg", "info": true, "status": "Publicado"}, {"title": "Garantismo Tecnológico e a Lei Embutida no Código na Era da Governança Algorítmica", "cat": "Tecnologia & Direito", "date": "2026-06-20", "excerpt": "", "url": "https://p7noticias.com.br/noticia/garantismo-tecnologico-e-a-lei-embutida-no-codigo-na-era-da-governanca-algoritmica", "thumb": "assets/uploads/art_2006.jpg", "info": true, "status": "Publicado"}, {"title": "Inteligência Artificial na Segurança Pública: O Pacto Possível entre Eficiência Operacional e Segurança Jurídica", "cat": "Segurança Pública", "date": "2026-06-17", "excerpt": "", "url": "https://p7noticias.com.br/noticia/inteligencia-artificial-na-seguranca-publica-o-pacto-possivel-entre-eficiencia-operacional-e-seguranca-juridica", "thumb": "assets/uploads/art_1706.jpg", "info": true, "status": "Publicado"}, {"title": "A Arquitetura da Legitimidade: A Governança Algorítmica e o Futuro da Segurança Pública no Brasil", "cat": "Governança", "date": "2026-06-08", "excerpt": "", "url": "https://p7noticias.com.br/noticia/a-arquitetura-da-legitimidade-a-governanca-algoritmica-e-o-futuro-da-seguranca-publica-no-brasil", "thumb": "assets/uploads/art_0806.jpg", "info": true, "status": "Publicado"}, {"title": "A Arquitetura da Legitimidade: Governança, Inteligência Artificial e Consórcios na Segurança Pública Contemporânea", "cat": "Governança", "date": "2026-05-31", "excerpt": "", "url": "https://p7noticias.com.br/noticia/a-arquitetura-da-legitimidade-governanca-inteligencia-artificial-e-consorcios-na-seguranca-publica-contemporanea", "thumb": "assets/uploads/b_seated_navy_c.jpg", "info": false, "status": "Publicado"}, {"title": "Smart City Regional: Alagoinhas (BA) na Vanguarda em Consórcio Intermunicipal de Segurança Pública", "cat": "Inovação", "date": "2026-05-28", "excerpt": "", "url": "https://p7noticias.com.br/noticia/smart-city-regional-alagoinhas-ba-visionariamente-na-vanguarda-em-consorcio-intermunicipal-de-seguranca-publica", "thumb": "assets/uploads/art_2805.jpg", "info": true, "status": "Publicado"}, {"title": "Da “Cidade Invisível” ao Estado de Direito Digital: Uma Análise Crítica do BNMP 3.0 na Bahia", "cat": "Direito Digital", "date": "2026-05-12", "excerpt": "", "url": "https://p7noticias.com.br/noticia/da-cidade-invisivel-ao-estado-de-direito-digital-uma-analise-critica-do-bnmp-30-na-bahia", "thumb": "assets/uploads/b_arms_grey_c.jpg", "info": false, "status": "Publicado"}, {"title": "A Falácia da Algoritocracia: Tecnologia e Protocolos Éticos como Caminho para a Eficiência Nacional", "cat": "Governança & IA", "date": "2026-04-29", "excerpt": "", "url": "https://p7noticias.com.br/noticia/a-falacia-da-algoritocracia-a-integracao-entre-tecnologia-e-protocolos-eticos-como-caminho-para-a-eficiencia-nacional", "thumb": "assets/uploads/b_intense_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "Diálogos pela Justiça: A Ciência de Dados e o Olhar Antirracista na Segurança Pública", "cat": "Dados & Justiça", "date": "2026-04-25", "excerpt": "", "url": "https://p7noticias.com.br/noticia/dialogos-pela-justica-a-ciencia-de-dados-e-o-olhar-antirracista-na-seguranca-publica", "thumb": "assets/uploads/b_headshot_smile_c.jpg", "info": false, "status": "Publicado"}, {"title": "Como a Bahia antecipou as regras do Ministério da Justiça para o uso de IA na Polícia", "cat": "Política & Regulação", "date": "2026-04-21", "excerpt": "", "url": "https://p7noticias.com.br/noticia/como-a-bahia-antecipou-as-regras-do-ministerio-da-justica-para-o-uso-de-ia-na-policia", "thumb": "assets/uploads/b_arms_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "A Nova Era da Gestão Prisional: Tecnologia, Dignidade e a Retomada do Estado", "cat": "Gestão Prisional", "date": "2026-04-16", "excerpt": "", "url": "https://p7noticias.com.br/noticia/a-nova-era-da-gestao-prisional-tecnologia-dignidade-e-a-retomada-do-estado", "thumb": "assets/uploads/b_profile_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "IA e Segurança Pública: O Caso da Bahia como Modelo de Socialização Ética da Tecnologia no Brasil", "cat": "Segurança & IA", "date": "2026-04-08", "excerpt": "", "url": "https://p7noticias.com.br/noticia/ia-e-seguranca-publica-o-caso-da-bahia-como-modelo-de-socializacao-etica-da-tecnologia-no-brasil", "thumb": "assets/uploads/b_smile_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "Inovação e Segurança Pública: Encontro debate o uso do reconhecimento facial na Bahia", "cat": "Institucional", "date": "2026-04-08", "excerpt": "", "url": "https://p7noticias.com.br/noticia/inovacao-e-seguranca-publica-encontro-debate-o-uso-do-reconhecimento-facial-na-bahia", "thumb": "assets/uploads/b_stand_navy_c.jpg", "info": false, "status": "Publicado"}, {"title": "Uso de reconhecimento facial na segurança pública: na Bahia não é vigilância distópica; é filtro de justiça e valor social", "cat": "Opinião", "date": "2026-04-04", "excerpt": "", "url": "https://p7noticias.com.br/noticia/uso-de-reconhecimento-facial-na-seguranca-publica-na-bahia-nao-e-vigilancia-distopica-e-filtro-de-justica-e-valor-social", "thumb": "assets/uploads/b_full_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "Ciência e Tecnologia: Livro sobre Reconhecimento Facial é apresentado como “Escudo Estratégico” na SSP-BA", "cat": "Ciência & Tecnologia", "date": "2026-04-03", "excerpt": "", "url": "https://p7noticias.com.br/noticia/ciencia-e-tecnologia-livro-sobre-reconhecimento-facial-e-apresentado-como-escudo-estrategico-na-ssp-ba", "thumb": "assets/uploads/b_book_facial_c.jpg", "info": false, "status": "Publicado"}, {"title": "Tragédia em Cassange: O “Tribunal do Crime” e a Resposta Tecnológica no Enfrentamento às Facções", "cat": "Segurança Pública", "date": "2026-03-25", "excerpt": "", "url": "https://p7noticias.com.br/noticia/tragedia-em-cassange-o-tribunal-do-crime-e-a-resposta-tecnologica-no-enfrentamento-as-faccoes", "thumb": "assets/uploads/b_headshot_grey_c.jpg", "info": false, "status": "Publicado"}, {"title": "Comandante-Geral da PMBA recebe o Coronel Antonio Luis para diálogo sobre tecnologia e segurança baseada em evidências", "cat": "Institucional", "date": "2026-03-24", "excerpt": "", "url": "https://p7noticias.com.br/noticia/comandante-geral-da-pmba-recebe-o-coronel-antonio-luis-colunista-do-p7-noticias-para-dialogo-sobre-tecnologia-e-seguranca-baseada-em-evidencias", "thumb": "assets/uploads/b_seated_navy_c.jpg", "info": false, "status": "Publicado"}, {"title": "O Município como Protagonista da Era da Gestão Baseada em Evidências e Projetos Estratégicos", "cat": "Gestão Pública", "date": "2026-03-20", "excerpt": "", "url": "https://p7noticias.com.br/noticia/o-municipio-como-protagonista-da-era-da-gestao-baseada-em-evidencias-e-projetos-estrategicos", "thumb": "assets/uploads/b_arms_grey_c.jpg", "info": false, "status": "Publicado"}, {"title": "Bahia Fortalece Segurança Integrada com 5ª Edição do Curso de Nivelamento para Guardas Municipais", "cat": "Institucional", "date": "2026-03-18", "excerpt": "", "url": "https://p7noticias.com.br/noticia/bahia-fortalece-seguranca-integrada-com-5a-edicao-do-curso-de-nivelamento-para-guardas-municipais", "thumb": "assets/uploads/b_intense_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "Ciência contra o Crime: O impacto do Reconhecimento Facial na Bahia em debate no Programa Primeira Mão", "cat": "Mídia", "date": "2026-03-16", "excerpt": "", "url": "https://p7noticias.com.br/noticia/ciencia-contra-o-crime-o-impacto-do-reconhecimento-facial-na-bahia-em-debate-no-programa-primeira-mao", "thumb": "assets/uploads/b_headshot_smile_c.jpg", "info": false, "status": "Publicado"}, {"title": "Tecnologia a Serviço da Vida: Como o Reconhecimento Facial na Bahia está unindo famílias e localizando desaparecidos", "cat": "Tecnologia & Sociedade", "date": "2026-03-04", "excerpt": "", "url": "https://p7noticias.com.br/noticia/tecnologia-a-servico-da-vida-como-o-reconhecimento-facial-na-bahia-esta-unindo-familias-e-localizando-desaparecidos", "thumb": "assets/uploads/b_arms_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "O Divisor de Águas de 2026: Do Operacional ao Legado de Estado", "cat": "Estratégia", "date": "2026-02-28", "excerpt": "", "url": "https://p7noticias.com.br/noticia/o-divisor-de-aguas-de-2026-do-operacional-ao-legado-de-estado-2", "thumb": "assets/uploads/b_profile_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "Colunista do P7 apresenta obra sobre reconhecimento facial ao Secretário de Segurança da Bahia no COI", "cat": "Institucional", "date": "2026-02-27", "excerpt": "", "url": "https://p7noticias.com.br/noticia/colunista-do-p7-noticias-apresenta-obra-sobre-reconhecimento-facial-ao-secretario-de-seguranca-da-bahia-no-coi", "thumb": "assets/uploads/b_book_facial_alt_c.jpg", "info": false, "status": "Publicado"}, {"title": "Redoma de Proteção: Como a tecnologia pretende resgatar a segurança pública na Bahia em 2026", "cat": "Segurança & Tecnologia", "date": "2026-02-24", "excerpt": "", "url": "https://p7noticias.com.br/noticia/redoma-de-protecao-como-a-tecnologia-pretende-resgatar-a-seguranca-publica-na-bahia-em-2026", "thumb": "assets/uploads/b_smile_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "A Redoma de Proteção: Tecnologia e Integração Federativa como Pilares da Paz Social", "cat": "Segurança & Tecnologia", "date": "2026-02-18", "excerpt": "", "url": "https://p7noticias.com.br/noticia/a-redoma-de-protecao-tecnologia-e-integracao-federativa-como-pilares-da-paz-social", "thumb": "assets/uploads/b_stand_navy_c.jpg", "info": false, "status": "Publicado"}, {"title": "A Batalha Invisível: O Duelo entre a Inteligência Estatal e o Poder de Fogo das Facções", "cat": "Segurança Pública", "date": "2026-02-10", "excerpt": "", "url": "https://p7noticias.com.br/noticia/a-batalha-invisivel-o-duelo-entre-a-inteligencia-estatal-e-o-poder-de-fogo-das-faccoes", "thumb": "assets/uploads/b_full_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "O Reconhecimento Facial Só Prende Pobre? O Caso Sérgio Nahas na Praia do Forte-BA Prova o Contrário", "cat": "Direito & Tecnologia", "date": "2026-01-27", "excerpt": "", "url": "https://p7noticias.com.br/noticia/o-reconhecimento-facial-so-prende-pobre-o-caso-sergio-nahas-na-praia-do-forte-ba-prova-o-contrario", "thumb": "assets/uploads/b_headshot_grey_c.jpg", "info": false, "status": "Publicado"}, {"title": "Regulação Algorítmica Local: Como a nova legislação de Salvador dialoga com a crítica acadêmica", "cat": "Direito Digital", "date": "2026-01-13", "excerpt": "", "url": "https://p7noticias.com.br/noticia/regulacao-algoritmica-local-como-a-nova-legislacao-de-salvador-dialoga-com-a-critica-academica", "thumb": "assets/uploads/b_seated_navy_c.jpg", "info": false, "status": "Publicado"}, {"title": "O Fim do Anonimato e a Persistência da Crise: Uma Análise Sistêmica sobre a Tecnologia na Segurança Pública da Bahia", "cat": "Segurança Pública", "date": "2025-12-29", "excerpt": "", "url": "https://p7noticias.com.br/noticia/o-fim-do-anonimato-e-a-persistencia-da-crise-uma-analise-sistemica-sobre-a-tecnologia-na-seguranca-publica-da-bahia", "thumb": "assets/uploads/b_arms_grey_c.jpg", "info": false, "status": "Publicado"}, {"title": "O Futuro é Data-Driven: Como o livro “Avaliação do Vídeo-Polícia Expansão” ensina o Estado a inovar e antecipar riscos", "cat": "Gestão & Dados", "date": "2025-12-19", "excerpt": "", "url": "https://p7noticias.com.br/noticia/o-futuro-e-data-driven-como-o-livro-avaliacao-do-video-policia-expansao-ensina-o-estado-a-inovar-antecipar-riscos-e-entregar-uma-experiencia-de-seguranca-superior-ao-cidadao-1", "thumb": "assets/uploads/b_book_pipa_c.jpg", "info": false, "status": "Publicado"}, {"title": "Diagnóstico Profundo: Livro mapeia as falhas estruturais que exigiram a modernização da segurança pública na Bahia", "cat": "Ciência & Tecnologia", "date": "2025-12-11", "excerpt": "", "url": "https://p7noticias.com.br/noticia/diagnostico-profundo-livro-mapeia-as-falhas-estruturais-que-exigiram-a-modernizacao-da-seguranca-publica-na-bahia", "thumb": "assets/uploads/b_book_facial_c.jpg", "info": false, "status": "Publicado"}, {"title": "A Bahia na Era do Conhecimento do Século XXI?", "cat": "Opinião", "date": "2025-12-02", "excerpt": "", "url": "https://p7noticias.com.br/noticia/artigo-a-bahia-na-era-do-conhecimento-do-seculo-xxi", "thumb": "assets/uploads/b_intense_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "PL Antifacção amplia o debate sobre tecnologias de vigilância", "cat": "Direito & Segurança", "date": "2025-11-26", "excerpt": "", "url": "https://p7noticias.com.br/noticia/artigo-pl-antifaccao-amplia-debate-sobre-tecnologias-de-vigilancia", "thumb": "assets/uploads/b_headshot_smile_c.jpg", "info": false, "status": "Publicado"}, {"title": "Estudo aponta Reconhecimento Facial como arma estratégica para frear a expansão de facções na Bahia", "cat": "Segurança Pública", "date": "2025-11-18", "excerpt": "", "url": "https://p7noticias.com.br/noticia/artigo-estudo-aponta-reconhecimento-facial-como-arma-estrategica-para-frear-expansao-de-faccoes-criminosas-na-bahia", "thumb": "assets/uploads/b_arms_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "Livro sobre reconhecimento facial na Bahia impulsiona o debate de “Cidade Inteligente” e “Cidade Resiliente”", "cat": "Ciência & Tecnologia", "date": "2025-11-11", "excerpt": "", "url": "https://p7noticias.com.br/noticia/livro-sobre-reconhecimento-facial-na-bahia-impulsiona-o-debate-dos-conceitos-de-cidade-inteligente-e-cidade-resiliente", "thumb": "assets/uploads/b_book_facial_alt_c.jpg", "info": false, "status": "Publicado"}, {"title": "A Megaoperação Policial no Rio de Janeiro", "cat": "Segurança Pública", "date": "2025-11-04", "excerpt": "", "url": "https://p7noticias.com.br/noticia/artigo-a-megaoperacao-policial-no-rio-de-janeiro", "thumb": "assets/uploads/b_profile_black_c.jpg", "info": false, "status": "Publicado"}, {"title": "Reconhecimento facial na Bahia recebe selo acadêmico e é classificado como “case de sucesso” em segurança pública", "cat": "Ciência & Tecnologia", "date": "2025-10-31", "excerpt": "", "url": "https://p7noticias.com.br/noticia/reconhecimento-facial-na-bahia-recebe-selo-academico-e-e-classificado-como-case-de-sucesso-em-seguranca-publica", "thumb": "assets/uploads/b_smile_black_c.jpg", "info": false, "status": "Publicado"}]};
+const FALLBACK_VIDEO = {"id": "FlXqrp8NHsw", "title": "Programa Primeira Mão — Entrevista com o Coronel Antônio Luis", "channel": "Rádio 2 de Julho", "date": "2026-03-11", "desc": "Entrevista ao vivo sobre segurança pública, tecnologia e legitimidade institucional, em Alagoinhas–BA."};
+const _ARR = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+function _fmt(d){if(!d)return '';const p=d.split('-');return p.length===3?p[2]+'/'+p[1]+'/'+p[0]:d;}
+function _esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function _card(a){const cls=a.info?'info':'portrait';return `<a href="${a.url}" target="_blank" rel="noopener" class="ncard"><div class="th ${cls} protect"><img src="${a.thumb}" alt="" loading="lazy"></div><div class="bd"><div class="cat">${_esc(a.cat)} · ${_fmt(a.date)}</div><h4>${_esc(a.title)}</h4><span class="rd">Ler no P7 ${_ARR}</span></div></a>`;}
+function _renderArticles(items){const pub=(items||[]).filter(a=>a&&a.url&&(a.status||'Publicado')!=='Rascunho').sort((x,y)=>(y.date||'').localeCompare(x.date||''));document.getElementById('mgrid').innerHTML=pub.map(_card).join('');}
+function _renderVideo(v){const id=((v&&v.id)||'').trim();if(!id){document.getElementById('featwrap').innerHTML='';return;}document.getElementById('featwrap').innerHTML=`<div class="feat-video"><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="${_esc(v.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="feat-meta"><div class="cat">${_esc(v.channel)} · ${_fmt(v.date)}</div><h3>${_esc(v.title)}</h3><p>${_esc(v.desc)}</p><a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener" class="btn btn-acc">Assistir no YouTube ${_ARR}</a></div></div>`;}
+async function _load(u,fb){try{const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw 0;return await r.json();}catch(e){return fb;}}
+(async()=>{const a=await _load('content/articles.json',FALLBACK_ARTICLES);_renderArticles((a&&a.items)?a.items:FALLBACK_ARTICLES.items);const v=await _load('content/video.json',FALLBACK_VIDEO);_renderVideo(v||FALLBACK_VIDEO);})();
+</script><script>
+const hdr=document.getElementById('hdr'),prog=document.getElementById('prog');
+addEventListener('scroll',()=>{hdr.classList.toggle('scr',scrollY>24);const h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+const burger=document.getElementById('burger'),mm=document.getElementById('mm');
+burger.addEventListener('click',()=>mm.classList.toggle('open'));
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+const mq=document.getElementById('marq');if(mq)mq.innerHTML+=mq.innerHTML;
+document.querySelectorAll('.btn-acc').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.18-2}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
+const WEB3FORMS_KEY="COLE_AQUI_SUA_ACCESS_KEY_WEB3FORMS";
+const cf=document.getElementById('cform');
+if(cf)cf.addEventListener('submit',async e=>{e.preventDefault();const m=document.getElementById('fmsg');
+ if(!cf.checkValidity()){m.style.color='#FF7A7A';m.textContent='Preencha os campos obrigatórios.';return;}
+ if(WEB3FORMS_KEY.indexOf('COLE_AQUI')===0){m.style.color='#FF7A7A';m.textContent='Formulário ainda não configurado: insira a access key do Web3Forms.';return;}
+ const btn=cf.querySelector('button[type=submit]');btn.disabled=true;m.style.color='';m.textContent='Enviando…';
+ const data=Object.fromEntries(new FormData(cf).entries());
+ data.access_key=WEB3FORMS_KEY;data.from_name='Site SFi Gestão Estratégica';data.subject='Novo contato pelo site — '+(data.assunto||'SFi');
+ try{const r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
+  const j=await r.json();
+  if(j.success){m.style.color='';m.textContent='Mensagem enviada! Em breve retornaremos.';cf.reset();}
+  else{m.style.color='#FF7A7A';m.textContent='Não foi possível enviar. Tente novamente ou fale pelo LinkedIn.';}
+ }catch(err){m.style.color='#FF7A7A';m.textContent='Falha de conexão. Tente novamente em instantes.';}
+ finally{btn.disabled=false;}});
+document.addEventListener('contextmenu',e=>{if(e.target.closest('.protect'))e.preventDefault()});
+document.addEventListener('dragstart',e=>{if(e.target.closest('.protect'))e.preventDefault()});
+</script></body></html>
