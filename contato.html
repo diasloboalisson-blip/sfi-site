@@ -327,7 +327,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
 const mq=document.getElementById('marq');if(mq)mq.innerHTML+=mq.innerHTML;
 document.querySelectorAll('.btn-acc').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.18-2}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
-const WEB3FORMS_KEY="COLE_AQUI_SUA_ACCESS_KEY_WEB3FORMS";
+const WEB3FORMS_KEY="1087f072-53d5-4dde-acca-8ae6ca502665";
 const cf=document.getElementById('cform');
 if(cf)cf.addEventListener('submit',async e=>{e.preventDefault();const m=document.getElementById('fmsg');
  if(!cf.checkValidity()){m.style.color='#FF7A7A';m.textContent='Preencha os campos obrigatórios.';return;}
