@@ -71,3 +71,68 @@ collections:
           - {label: "Canal / Veículo", name: "channel", widget: "string"}
           - {label: "Data", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false, format: "YYYY-MM-DD"}
           - {label: "Descrição", name: "desc", widget: "text"}
+  # ----- SOBRE O FUNDADOR (foto e bio) -----
+  - name: "perfil"
+    label: "Sobre o Fundador (foto e bio)"
+    description: "Foto, resumo e biografia exibidos na página Sobre."
+    files:
+      - name: "sobre"
+        label: "Sobre o Fundador"
+        file: "content/sobre.json"
+        format: json
+        fields:
+          - {label: "Foto", name: "photo", widget: "image", hint: "Retrato vertical. Substitui a foto da página Sobre."}
+          - {label: "Resumo (linha abaixo do nome)", name: "sub", widget: "text"}
+          - {label: "Biografia", name: "bio", widget: "text", hint: "Separe cada parágrafo deixando UMA linha em branco entre eles."}
+
+  # ----- ÁREAS DE ATUAÇÃO -----
+  - name: "areas"
+    label: "Áreas de Atuação"
+    description: "As frentes de trabalho exibidas na página Áreas."
+    files:
+      - name: "lista"
+        label: "Lista de Áreas"
+        file: "content/areas.json"
+        format: json
+        fields:
+          - label: "Áreas"
+            name: "items"
+            label_singular: "Área"
+            widget: "list"
+            summary: "{{fields.num}} — {{fields.title}}"
+            fields:
+              - {label: "Número", name: "num", widget: "string", hint: "Ex.: 01, 02, 03..."}
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Descrição", name: "desc", widget: "text"}
+
+  # ----- PUBLICAÇÕES -----
+  - name: "publicacoes"
+    label: "Publicações (Livros)"
+    description: "Obras exibidas na página Publicações."
+    files:
+      - name: "lista"
+        label: "Lista de Obras"
+        file: "content/publicacoes.json"
+        format: json
+        fields:
+          - label: "Obras"
+            name: "items"
+            label_singular: "Obra"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Capa", name: "image", widget: "image"}
+              - {label: "Editora / Linha", name: "ed", widget: "string", hint: "Ex.: Editora Dialética · Livro 1"}
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Subtítulo", name: "tag", widget: "string", required: false}
+              - {label: "Descrição", name: "body", widget: "text", hint: "Separe os parágrafos com UMA linha em branco."}
+              - label: "Botões de compra"
+                name: "links"
+                widget: "list"
+                required: false
+                label_singular: "Botão"
+                summary: "{{fields.label}}"
+                fields:
+                  - {label: "Texto do botão", name: "label", widget: "string"}
+                  - {label: "Link (URL)", name: "url", widget: "string"}
+                  - {label: "Botão de destaque?", name: "primary", widget: "boolean", default: false}

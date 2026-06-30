@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "num": "01",
+      "title": "Avaliação e Institucionalização de Políticas Públicas",
+      "desc": "Apoiamos governos e secretarias na transição de um modelo de gestão reativo para uma cultura orientada a dados. Realizamos diagnósticos, estruturação e avaliação contínua de políticas públicas, assegurando que os recursos sejam aplicados com eficiência e que os resultados entreguem valor real à sociedade."
+    },
+    {
+      "num": "02",
+      "title": "Tecnologia Aplicada à Segurança Pública",
+      "desc": "Assessoria especializada sobre a implementação de ferramentas como Inteligência Artificial e sistemas de biometria. Nosso foco é garantir que inovações operacionais estejam perfeitamente alinhadas aos marcos legais constitucionais — segurança através da tecnologia, sem abrir mão das garantias de direitos fundamentais."
+    },
+    {
+      "num": "03",
+      "title": "Relações Institucionais e Integração Interfederativa",
+      "desc": "Facilitamos o diálogo estratégico entre diferentes níveis de governo (como o fortalecimento das Guardas Municipais no SUSP), órgãos de segurança e parceiros do ecossistema de tecnologia. Atuamos na construção de pontes sólidas para projetos de interesse público."
+    },
+    {
+      "num": "04",
+      "title": "Capacitação de Lideranças e Palestras Estratégicas",
+      "desc": "Cursos de nivelamento e palestras imersivas voltadas para a alta gestão pública e comandos de segurança, abordando temas desde operações e inteligência até a modernização das estruturas governamentais."
+    }
+  ]
+}

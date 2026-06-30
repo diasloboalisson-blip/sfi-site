@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "image": "assets/uploads/b_book_facial_c.jpg",
+      "ed": "Editora Dialética · Livro 1",
+      "title": "Avaliação do Vídeo-Polícia Expansão",
+      "tag": "A utilização do reconhecimento facial na segurança pública da Bahia.",
+      "body": "Uma análise profunda sobre a adoção da tecnologia de biometria facial no estado da Bahia. A obra explora os desafios técnicos, os impactos operacionais e, principalmente, as implicações legais e constitucionais do uso de IA pelo Estado, propondo um modelo de avaliação rigoroso para essas ferramentas.\n\nFruto da dissertação de mestrado, o estudo avalia a política a partir das informações dos gestores envolvidos, com foco na utilidade e relevância do uso do reconhecimento facial para o alcance de foragidos na Bahia, no período de 2019 ao primeiro semestre de 2024 — constatando preocupações relevantes e apontando recomendações para aprimorar o projeto.",
+      "links": [
+        {
+          "label": "Adquirir (Editora Dialética)",
+          "url": "https://loja.editoradialetica.com/humanidades/avaliacao-do-video-policia-expansao-a-utilizacao-do-reconhecimento-facial-na-seguranca-publica-da-bahia",
+          "primary": true
+        },
+        {
+          "label": "E-book (Amazon)",
+          "url": "https://www.amazon.com.br/Avalia%C3%A7%C3%A3o-V%C3%ADdeo-Pol%C3%ADcia-utiliza%C3%A7%C3%A3o-reconhecimento-seguran%C3%A7a-ebook/dp/B0FV93S264",
+          "primary": false
+        },
+        {
+          "label": "Internacional (B&N)",
+          "url": "https://www.barnesandnoble.com/w/avaliacao-do-video-policia-antonio-luis-dos-santos-filho/1148496460",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "image": "assets/uploads/b_book_pipa_c.jpg",
+      "ed": "Editora Dialética · Livro 2",
+      "title": "Operação Carro-Pipa",
+      "tag": "O acesso à água no contexto do semiárido nordestino.",
+      "body": "Um estudo detalhado sobre logística, gestão de recursos e o papel do Estado em operações de mitigação dos efeitos da seca — combinando a vivência prática na ordenação de despesas com a análise acadêmica de resultados.\n\nSurgida a partir da dissertação de mestrado, a obra compreende a Operação como instrumento garantidor do direito fundamental ao acesso à água potável durante a seca de 2012 a 2019, aprofundando o direito à água na concepção do direito humano internacional e como direito fundamental nas normas brasileiras.",
+      "links": [
+        {
+          "label": "Adquirir Obra",
+          "url": "#",
+          "primary": true
+        }
+      ]
+    }
+  ]
+}
