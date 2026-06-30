@@ -274,12 +274,12 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;background:var(--bg2
 <div class="reveal"><span class="mono eyebrow">Sobre o Fundador</span>
 <h1>Antonio Luis dos Santos Filho</h1>
 <div class="role">Coronel Veterano · Pesquisador · Arquiteto da Legitimidade</div>
-<p class="sub">Mais de três décadas no Exército Brasileiro, unindo liderança estratégica e gestão de alta complexidade ao mais alto rigor acadêmico e jurídico.</p></div>
-<div class="phero-fig reveal protect"><img src="assets/uploads/b_stand_navy_c.jpg" alt="Antonio Luis dos Santos Filho"></div>
+<p class="sub" id="sb-sub">Mais de três décadas no Exército Brasileiro, unindo liderança estratégica e gestão de alta complexidade ao mais alto rigor acadêmico e jurídico.</p></div>
+<div class="phero-fig reveal protect"><img id="sb-photo" src="assets/uploads/b_stand_navy_c.jpg" alt="Antonio Luis dos Santos Filho"></div>
 </div></section>
 
 <section class="sec"><div class="container">
-<div class="prose lead reveal">
+<div class="prose lead reveal" id="sb-bio">
 <p>Com mais de três décadas de serviço dedicado ao Exército Brasileiro, Antonio Luis consolidou uma trajetória marcada pela liderança estratégica e pela gestão de alta complexidade. Durante sua carreira, desempenhou o papel fundamental de Ordenador de Despesas em operações de grande envergadura voltadas à distribuição hídrica e implantação de infraestrutura, adquirindo uma visão sistêmica sobre os desafios logísticos e orçamentários do Estado.</p>
 <p>É Mestre em Avaliação de Políticas Públicas pela Universidade Federal do Ceará (UFC) e Mestre em Direito Constitucional, unindo a solidez operacional militar ao mais alto rigor acadêmico e jurídico.</p>
 <p>Como pesquisador e autor, dedica-se ao estudo das tecnologias aplicadas à segurança pública, especialmente o uso do reconhecimento facial e da inteligência artificial, sempre pautado pela defesa das garantias de direitos e pela eficácia administrativa. Atualmente, por meio da SFi Gestão Estratégica, atua como consultor para instituições públicas e privadas, palestrante e colunista semanal.</p>
@@ -359,4 +359,16 @@ if(cf)cf.addEventListener('submit',async e=>{e.preventDefault();const m=document
  finally{btn.disabled=false;}});
 document.addEventListener('contextmenu',e=>{if(e.target.closest('.protect'))e.preventDefault()});
 document.addEventListener('dragstart',e=>{if(e.target.closest('.protect'))e.preventDefault()});
-</script></body></html>
+</script>
+<script>
+(async function(){
+ function E(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+ try{
+  var r=await fetch('content/sobre.json',{cache:'no-store'});if(!r.ok)return;var d=await r.json();
+  if(d.photo){var im=document.getElementById('sb-photo');if(im)im.src=d.photo;}
+  if(d.sub){var su=document.getElementById('sb-sub');if(su)su.textContent=d.sub;}
+  if(d.bio){var b=document.getElementById('sb-bio');if(b)b.innerHTML=String(d.bio).split(/\n\s*\n/).map(function(p){return p.trim();}).filter(Boolean).map(function(p){return '<p>'+E(p)+'</p>';}).join('');}
+ }catch(e){}
+})();
+</script>
+</body></html>

@@ -276,7 +276,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;background:var(--bg2
 <p class="sub">Apoiamos governos, secretarias e parceiros do setor privado na transição de um modelo reativo para uma cultura orientada a dados.</p>
 </div></section>
 
-<section class="sec" style="padding-top:60px"><div class="container">
+<section class="sec" style="padding-top:60px"><div class="container" id="areas-grid">
 <div class="svc reveal"><div class="sn">01</div><div><h3>Avaliação e Institucionalização de Políticas Públicas</h3><p>Apoiamos governos e secretarias na transição de um modelo de gestão reativo para uma cultura orientada a dados. Realizamos diagnósticos, estruturação e avaliação contínua de políticas públicas, assegurando que os recursos sejam aplicados com eficiência e que os resultados entreguem valor real à sociedade.</p></div></div>
 <div class="svc reveal"><div class="sn">02</div><div><h3>Tecnologia Aplicada à Segurança Pública</h3><p>Assessoria especializada sobre a implementação de ferramentas como Inteligência Artificial e sistemas de biometria. Nosso foco é garantir que inovações operacionais estejam perfeitamente alinhadas aos marcos legais constitucionais — segurança através da tecnologia, sem abrir mão das garantias de direitos fundamentais.</p></div></div>
 <div class="svc reveal"><div class="sn">03</div><div><h3>Relações Institucionais e Integração Interfederativa</h3><p>Facilitamos o diálogo estratégico entre diferentes níveis de governo (como o fortalecimento das Guardas Municipais no SUSP), órgãos de segurança e parceiros do ecossistema de tecnologia. Atuamos na construção de pontes sólidas para projetos de interesse público.</p></div></div>
@@ -333,4 +333,16 @@ if(cf)cf.addEventListener('submit',async e=>{e.preventDefault();const m=document
  finally{btn.disabled=false;}});
 document.addEventListener('contextmenu',e=>{if(e.target.closest('.protect'))e.preventDefault()});
 document.addEventListener('dragstart',e=>{if(e.target.closest('.protect'))e.preventDefault()});
-</script></body></html>
+</script>
+<script>
+(async function(){
+ function E(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+ try{
+  var r=await fetch('content/areas.json',{cache:'no-store'});if(!r.ok)return;var d=await r.json();
+  var items=d&&d.items;if(!items||!items.length)return;
+  var g=document.getElementById('areas-grid');if(!g)return;
+  g.innerHTML=items.map(function(a){return '<div class="svc"><div class="sn">'+E(a.num)+'</div><div><h3>'+E(a.title)+'</h3><p>'+E(a.desc)+'</p></div></div>';}).join('');
+ }catch(e){}
+})();
+</script>
+</body></html>

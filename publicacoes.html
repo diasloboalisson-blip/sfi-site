@@ -276,7 +276,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;background:var(--bg2
 <p class="sub">A base da SFi é o conhecimento documentado e testado. Conheça as obras publicadas pela Editora Dialética que fundamentam nossa metodologia.</p>
 </div></section>
 
-<section class="sec"><div class="container">
+<section class="sec"><div class="container" id="pubs-grid">
 <div class="bookfull reveal">
 <div class="bk-fig protect"><img src="assets/uploads/b_book_facial_c.jpg" alt="Avaliação do Vídeo-Polícia Expansão"></div>
 <div><div class="ed">Editora Dialética · Livro 1</div>
@@ -350,4 +350,25 @@ if(cf)cf.addEventListener('submit',async e=>{e.preventDefault();const m=document
  finally{btn.disabled=false;}});
 document.addEventListener('contextmenu',e=>{if(e.target.closest('.protect'))e.preventDefault()});
 document.addEventListener('dragstart',e=>{if(e.target.closest('.protect'))e.preventDefault()});
-</script></body></html>
+</script>
+<script>
+(async function(){
+ function E(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+ function P(t){return String(t||'').split(/\n\s*\n/).map(function(p){return p.trim();}).filter(Boolean).map(function(p){return '<p>'+E(p)+'</p>';}).join('');}
+ var ARROW='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+ try{
+  var r=await fetch('content/publicacoes.json',{cache:'no-store'});if(!r.ok)return;var d=await r.json();
+  var items=d&&d.items;if(!items||!items.length)return;
+  var g=document.getElementById('pubs-grid');if(!g)return;
+  g.innerHTML=items.map(function(b,i){
+   var rev=(i%2===1)?' rev':'';
+   var links=(b.links||[]).map(function(l){
+     var cls=l.primary?'btn-acc':'btn-gh';
+     return '<a href="'+E(l.url)+'" target="_blank" rel="noopener" class="btn '+cls+'">'+E(l.label)+(l.primary?' '+ARROW:'')+'</a>';
+   }).join('');
+   return '<div class="bookfull'+rev+'"><div class="bk-fig protect"><img src="'+E(b.image)+'" alt="'+E(b.title)+'"></div><div><div class="ed">'+E(b.ed)+'</div><h2>'+E(b.title)+'</h2>'+(b.tag?'<div class="tag">'+E(b.tag)+'</div>':'')+'<div class="prose">'+P(b.body)+'</div><div class="buy">'+links+'</div></div></div>';
+  }).join('');
+ }catch(e){}
+})();
+</script>
+</body></html>
