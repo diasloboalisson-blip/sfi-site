@@ -328,8 +328,20 @@ addEventListener('scroll',()=>{hdr.classList.toggle('scr',scrollY>24);const h=do
 const burger=document.getElementById('burger'),mm=document.getElementById('mm');
 burger.addEventListener('click',()=>mm.classList.toggle('open'));
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.classList.remove('open')));
+</script>
+<script>
+try{
+if(window.IntersectionObserver){
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+}else{
+document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+}catch(err){
+document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+</script>
+<script>
 const mq=document.getElementById('marq');if(mq)mq.innerHTML+=mq.innerHTML;
 document.querySelectorAll('.btn-acc').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.18-2}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
 const WEB3FORMS_KEY="COLE_AQUI_SUA_ACCESS_KEY_WEB3FORMS";
